@@ -26,4 +26,4 @@ GrpcBenchmark.callService  thrpt  200  3536.438 ± 40.681  ops/s
 RestBenchmark.callService  thrpt  200  1895.349 ± 25.321  ops/s
 ```
 
-Qualitatively, both benchmarks fully utilize a single CPU core (since only a single concurrent request is used, this is basically the cap). That implies both suites are CPU constrained, and that gRPC+protobuf is 2x faster/cpu efficient as Spring Rest+JSON.
+Qualitatively, both benchmarks fully utilize a single CPU core (since only a single concurrent request is used, this is basically the cap). That implies both suites are CPU constrained for this test. That isn't surprising, since there is not real network between client and server.
