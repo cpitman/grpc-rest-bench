@@ -18,7 +18,7 @@ public class Application {
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
         return args -> {
              org.openjdk.jmh.Main.main(args);
-             ((ConfigurableApplicationContext)ctx).close();
+             ((ConfigurableApplicationContext)ctx).close(); 
         };
     }
 
